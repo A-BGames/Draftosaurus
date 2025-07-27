@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formularioPartida.css">
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boogaloo&display=swap" rel="stylesheet">
+    <title>Partida</title>
+</head>
+<body>
+  <header id="encabezado">
+    <img src="../../Imagenes/Logo_de_empresa-removebg-preview - copia.png" alt="tortuga" id="imgLogo"/>
+  </header>
+  <main id="contenido">
+    <h1>Crear Nueva Partida</h1>
+    <form id="formularioNuevaPartida">
+      <label for="nombrePartida">Nombre de la partida:</label>
+      <input type="text" id="nombrePartida" required><br>
+      <label for="modoJuego">Modo de juego </label>
+      <select id="modoJuego" required>
+        <option value="" disabled selected>Seleccione...</option>
+        <option value="2">Normal</option>
+        <option value="3">Asistido</option>
+        <option value="4">Hardcore</option>
+      </select>
+      <br>
+      <label for="numeroJugadores">Número de jugadores:</label>
+      <select id="numeroJugadores" required>
+        <option value="" disabled selected>Seleccione...</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+          
+      
+      <div id="jugadoresInputs"></div>
+      <br>
+      <button type="submit">Nueva Partida</button>
+
+    </form>
+      
+    <script src="formularioPartida.js"></script>
+  </main>
+  <footer id="pieNuevaPartida">
+    <p id="derechos">Todos los derechos reservados por A-B GAMES S.A.S</p>
+  </footer>
+      
+</body>
+</html>

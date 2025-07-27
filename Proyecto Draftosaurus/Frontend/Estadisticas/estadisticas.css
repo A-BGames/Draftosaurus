@@ -1,0 +1,48 @@
+body{
+    margin: 0px;
+    height: 100%;
+}
+#encabezado{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: aquamarine;
+    height: 10vh;
+}
+
+#logo{
+    width: 20%;
+}
+#imgLogo{
+    width: 80px;
+    height: 80px;
+    border-radius: 40%;
+}
+
+h1{
+    font-size: 50px;
+    margin: 0px;
+}
+h2{
+    font-size: 40px;
+    margin: 0px;
+}
+h3{
+    font-size: 30px;
+    text-align: center;
+    margin: 0px;
+}
+#contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    background: lightskyblue;
+    margin: 0px;
+}
+canvas {
+    margin-top: 30px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
