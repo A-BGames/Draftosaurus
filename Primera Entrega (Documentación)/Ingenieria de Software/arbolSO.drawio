@@ -1,0 +1,266 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="Página-1" id="A2wzP1tfVRTcX8PbrIAY">
+    <mxGraphModel dx="1525" dy="423" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="IU87GApBluB2nBMDB_5C-1" value="Sistema Operativo del Servidor" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="360" y="41" width="129" height="129" as="geometry" />
+        </mxCell>
+        <mxCell id="IU87GApBluB2nBMDB_5C-2" value="Windows Server" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="489" y="230" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="IU87GApBluB2nBMDB_5C-4" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="IU87GApBluB2nBMDB_5C-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="559.5" y="230" as="sourcePoint" />
+            <mxPoint x="530" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IU87GApBluB2nBMDB_5C-6" value="" style="endArrow=none;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="180" as="sourcePoint" />
+            <mxPoint x="299.44441701214214" y="240.00246890720155" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IU87GApBluB2nBMDB_5C-8" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" parent="1" target="IU87GApBluB2nBMDB_5C-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="180" as="sourcePoint" />
+            <mxPoint x="380" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IU87GApBluB2nBMDB_5C-9" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" parent="1" target="IU87GApBluB2nBMDB_5C-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="530" y="180" as="sourcePoint" />
+            <mxPoint x="500" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IU87GApBluB2nBMDB_5C-10" value="Linux" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="259" y="230" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="IU87GApBluB2nBMDB_5C-25" value="Alto costo economico" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="660" y="300" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="IU87GApBluB2nBMDB_5C-37" value="Linux&amp;nbsp;&lt;div&gt;Es el sistema elegido para el servidor, ya que acompaña las tecnologias que utilizaremos para desarrollar el juego; ademas de que es software libre.El cliente nos pide que el servidor sea LAMP(Con SO Linux)&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="-30" y="150" width="170" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="IU87GApBluB2nBMDB_5C-38" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="nS8W4Vh0LbLkyuKPhKKB-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="209" y="360" as="sourcePoint" />
+            <mxPoint x="259" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IU87GApBluB2nBMDB_5C-39" value="" style="endArrow=none;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="360" as="sourcePoint" />
+            <mxPoint x="340" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fUWL0bDfQiG7c-SrvjR3-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="IU87GApBluB2nBMDB_5C-42" target="IU87GApBluB2nBMDB_5C-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IU87GApBluB2nBMDB_5C-42" value="Windows&lt;div&gt;Las licencias de Windows server generan un alto coste económico, además de que no lo consideramos indicado para este proyecto ya que los lenguajes de programacion backend y frontend que se utilizaran no se benefician de este sistema operativo&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="750" y="220" width="180" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="nS8W4Vh0LbLkyuKPhKKB-1" value="Ubuntu Server" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="210" y="360" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="nS8W4Vh0LbLkyuKPhKKB-2" value="CentOS" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="334" y="360" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="nS8W4Vh0LbLkyuKPhKKB-5" value="" style="endArrow=none;html=1;rounded=0;exitX=0.413;exitY=0.038;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="nS8W4Vh0LbLkyuKPhKKB-6" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="500" as="sourcePoint" />
+            <mxPoint x="384" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nS8W4Vh0LbLkyuKPhKKB-6" value="CentOS 7" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="414" y="505" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="nS8W4Vh0LbLkyuKPhKKB-7" value="CentOS 9 Stream" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="270" y="505" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="nS8W4Vh0LbLkyuKPhKKB-8" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="nS8W4Vh0LbLkyuKPhKKB-7" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="310" y="500" as="sourcePoint" />
+            <mxPoint x="350" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fUWL0bDfQiG7c-SrvjR3-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="nS8W4Vh0LbLkyuKPhKKB-10" target="nS8W4Vh0LbLkyuKPhKKB-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nS8W4Vh0LbLkyuKPhKKB-10" value="Centos 9 Stream es el sistema operativo elegido para el servidor; ya que se hace conocido para los miembros del grupo; es de facil instalación, gestión, compatibilidad con los sistemas de desarrollo e infraestructura.&amp;nbsp;&lt;div&gt;CentOS 9 Stream cuenta con actualizaciones frecuentes, por ende los parches de seguridad se actualizan e instalan con frecuencia&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="20" y="460" width="150" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="nS8W4Vh0LbLkyuKPhKKB-12" value="Centos 7:&lt;div&gt;No se eligió este sistema operativo ya que no cuenta con soporte técnico ni actualizaciones frecuentes de Red Hat, por lo cual dejaría vulnerable al sistema en cuanto a amenazas de seguridad.&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="520" y="485" width="170" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="nS8W4Vh0LbLkyuKPhKKB-13" value="Sistema Gestor de Base de Datos" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="334" y="640" width="101" height="101" as="geometry" />
+        </mxCell>
+        <mxCell id="nS8W4Vh0LbLkyuKPhKKB-14" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="nS8W4Vh0LbLkyuKPhKKB-13" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="635" as="sourcePoint" />
+            <mxPoint x="310" y="585" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nS8W4Vh0LbLkyuKPhKKB-15" value="MYSQL" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="430" y="760" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="nS8W4Vh0LbLkyuKPhKKB-17" value="Maria DB" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="259" y="760" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="nS8W4Vh0LbLkyuKPhKKB-18" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" parent="1" target="nS8W4Vh0LbLkyuKPhKKB-13" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="760" as="sourcePoint" />
+            <mxPoint x="350" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nS8W4Vh0LbLkyuKPhKKB-20" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" parent="1" source="nS8W4Vh0LbLkyuKPhKKB-15" target="nS8W4Vh0LbLkyuKPhKKB-13" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="369" y="770" as="sourcePoint" />
+            <mxPoint x="419" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nS8W4Vh0LbLkyuKPhKKB-22" value="Maria DB: Se eligió este sistema Gestor de bases de datos relacionales ya que es código abierto; esto quiere decir que su uso es gratuito, modificable y recibe actualizaciones frecuentes, el cliente nos pidió especificamente que utilicemos este gestor." style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="45" y="740" width="175" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="fUWL0bDfQiG7c-SrvjR3-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="nS8W4Vh0LbLkyuKPhKKB-24" target="nS8W4Vh0LbLkyuKPhKKB-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nS8W4Vh0LbLkyuKPhKKB-24" value="Mysql Enterprise Edition: No elegimos este sistema ya que supondría un costo elevado para el desarrollo del mismo, y el mantenimiento de este. Se depende de Oracle para las actualizaciones y soporte tecnico, pude generar un coste extra a largo plazo." style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="540" y="720" width="180" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="-vfiCY9B60NrrlOt8m7z-2" value="¿Sistema operativo a utilizar en el servidor local?&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="510" y="120" width="270" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-vfiCY9B60NrrlOt8m7z-3" value="" style="endArrow=none;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="569" y="270" as="sourcePoint" />
+            <mxPoint x="670" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-vfiCY9B60NrrlOt8m7z-4" value="" style="endArrow=none;html=1;rounded=0;exitX=0.125;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="IU87GApBluB2nBMDB_5C-25" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="620" y="320" as="sourcePoint" />
+            <mxPoint x="670" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-vfiCY9B60NrrlOt8m7z-5" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="-vfiCY9B60NrrlOt8m7z-6" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="910" as="sourcePoint" />
+            <mxPoint x="300" y="840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-vfiCY9B60NrrlOt8m7z-6" value="Herramienta desarrollo Backend" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="259" y="910" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-vfiCY9B60NrrlOt8m7z-7" value="¿Que herramienta de desarrollo vamos a utilizar?" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="20" y="920" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0To3Inqa46ILc9vliPnZ-1" value="" style="endArrow=none;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="209" y="1040" as="sourcePoint" />
+            <mxPoint x="259" y="990" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0To3Inqa46ILc9vliPnZ-2" value="" style="endArrow=none;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="1040" as="sourcePoint" />
+            <mxPoint x="340" y="990" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0To3Inqa46ILc9vliPnZ-5" value="PHP version 8.4.8" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#cdeb8b;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="170" y="1040" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0To3Inqa46ILc9vliPnZ-6" value="JAVA" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="344.5" y="1040" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0To3Inqa46ILc9vliPnZ-7" value="PHP: Se eligió este lenguaje de programación por su compatibilidad con el sistema gestor de base de datos MariaDB,&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;esta versión de php es una version estable, ya que el elegir una versión anterior podria vulnerar la seguridad del sistema .&lt;/span&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fillColor=#cdeb8b;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="-70" y="1000" width="170" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="0To3Inqa46ILc9vliPnZ-9" value="" style="endArrow=none;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="1190" as="sourcePoint" />
+            <mxPoint x="210" y="1120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0To3Inqa46ILc9vliPnZ-10" value="Herramientas desarrollo Frontend" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="170" y="1190" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0To3Inqa46ILc9vliPnZ-11" value="¿Qué herramientas de desarrollo Frontend utilizaremos?" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-70" y="1200" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0To3Inqa46ILc9vliPnZ-12" value="" style="endArrow=none;html=1;rounded=0;exitX=0.6;exitY=0.025;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" edge="1" source="fUWL0bDfQiG7c-SrvjR3-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="120" y="1330" as="sourcePoint" />
+            <mxPoint x="170" y="1270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0To3Inqa46ILc9vliPnZ-13" value="" style="endArrow=none;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="290" y="1330" as="sourcePoint" />
+            <mxPoint x="250" y="1270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fUWL0bDfQiG7c-SrvjR3-1" value="HTML5, CSS3, JS,Bootstrap" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1335" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="fUWL0bDfQiG7c-SrvjR3-2" value="Angular,React&lt;div&gt;,Babel&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="254" y="1330" width="90" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="fUWL0bDfQiG7c-SrvjR3-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="fUWL0bDfQiG7c-SrvjR3-3" target="0To3Inqa46ILc9vliPnZ-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fUWL0bDfQiG7c-SrvjR3-3" value="JAVA: no elegimos JAVA como lenguaje de programación back end, porque es lenguje que no esta orientado para el desarrollo web, mientras que PHP esta orientado al desarrollo de webs dinámicas." style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="460" y="1030" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="fUWL0bDfQiG7c-SrvjR3-4" value="Sistema destor de Base de datos¿Cúal?" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="690" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fUWL0bDfQiG7c-SrvjR3-7" value="Angular, React, Babel: Son herramientas que el equipo de desarrollo no conoce, y por ende no trabaja, siendo asi desconoce los alcances y limitaciones en cuanto a diseño." style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="389" y="1295" width="180" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="fUWL0bDfQiG7c-SrvjR3-8" value="HTML5, CSS3, JS y Bootstrap: se eligieron estos sistemas de desarrollo para el front end ya que son compatibles entre si y con el leguaje de programación backend, tiene funcionalidades que hace del desarrollo frontend mas dinamico y creativo.&lt;div&gt;Sin mencionar su facilidad de uso&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="-150" y="1290" width="180" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="fUWL0bDfQiG7c-SrvjR3-9" value="Bajo coste económico" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="280" width="81" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fUWL0bDfQiG7c-SrvjR3-10" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="245" as="sourcePoint" />
+            <mxPoint x="260" y="245" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fUWL0bDfQiG7c-SrvjR3-11" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="fUWL0bDfQiG7c-SrvjR3-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="150" y="295" as="sourcePoint" />
+            <mxPoint x="200" y="245" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fUWL0bDfQiG7c-SrvjR3-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.9;entryY=0.75;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="nS8W4Vh0LbLkyuKPhKKB-12" target="nS8W4Vh0LbLkyuKPhKKB-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="520" y="565" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fUWL0bDfQiG7c-SrvjR3-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.025;entryY=0.65;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="nS8W4Vh0LbLkyuKPhKKB-22" target="nS8W4Vh0LbLkyuKPhKKB-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fUWL0bDfQiG7c-SrvjR3-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.625;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="0To3Inqa46ILc9vliPnZ-7" target="0To3Inqa46ILc9vliPnZ-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fUWL0bDfQiG7c-SrvjR3-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.138;entryY=-0.012;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="IU87GApBluB2nBMDB_5C-37" target="IU87GApBluB2nBMDB_5C-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fUWL0bDfQiG7c-SrvjR3-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=-0.027;entryY=0.665;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="fUWL0bDfQiG7c-SrvjR3-8" target="fUWL0bDfQiG7c-SrvjR3-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fUWL0bDfQiG7c-SrvjR3-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.989;entryY=0.451;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="fUWL0bDfQiG7c-SrvjR3-7" target="fUWL0bDfQiG7c-SrvjR3-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
