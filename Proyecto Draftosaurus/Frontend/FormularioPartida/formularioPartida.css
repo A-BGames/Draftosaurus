@@ -1,0 +1,152 @@
+@media (min-width: 320px) { /* Mobile-First (320px - 576px) */
+  body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px;
+    height: 100vh;
+    width: 100%;
+    background-image:url('../../Imagenes/Fondo-Index.png');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+  }
+  #encabezado{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+  }
+  #imgLogo {
+    width: 50px;
+    height: 50px;
+  }
+  #contenido{
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items: center;
+    height: 85vh;
+    margin: 0px;
+  }
+  h1{
+   font-family: "Henny Penny", system-ui;
+   color:#d84f19;
+   text-align: center;
+   text-shadow: 2px 2px 4px black;
+   font-size: 25px;
+   margin: 0px;
+  
+}
+#formularioNuevaPartida {
+  padding-left: 10px;
+  background: #91a492;
+  width: 80%;
+  border-radius: 5%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  font-family: "Henny Penny", system-ui;
+  color: #e9c46a;
+  text-shadow: 2px 2px 4px black;
+  font-size: 14px;
+  text-align: center;
+}
+
+button{
+  width: 60%;
+  height: 30px;
+  margin-bottom: 5px;
+  font-family: "Henny Penny", system-ui;
+  font-size: 18px;
+  text-shadow: 2px 2px 4px black;
+  background-color: #c0633f;
+  box-shadow: 0.5px 0.5px 1px black;
+  color: rgb(235, 197, 128);
+}
+
+  #pieNuevaPartida {
+        display: flex;
+        align-items: center;
+        background: transparent;
+        height: 5vh;
+        width: 100%;
+    }
+    #derechos{
+        font-size: 12px;
+        margin: 0px;
+        width: 100%;
+        color: beige;
+        text-align: center;
+    } 
+}
+@media (min-width: 577px) { /* Tabletas (577px - 992px) */
+  #encabezado {
+    height: 15vh;
+    width: 94%;
+  }
+  #imgLogo{
+    width: 90px;
+    height: 90px;
+  }
+  #contenido{
+    height: 80vh;
+    width: 90%;
+  }
+  h1{
+    font-size: 40px;
+  }
+  #formularioNuevaPartida {
+    font-size: 22px;
+    
+  }
+  button{
+    width: 70%;
+    height: 60px;
+    font-size: 30px;
+  }
+    #bienvenida{
+        font-size: 28px;    
+        width: 95%;
+    }
+    #tituloMenu {
+        font-size: 42px;
+    }
+    a{
+        font-size: 28px;
+    }
+    #derechos{
+        font-size: 24px;
+    } 
+}
+@media (min-width: 993px) { /* Escritorio (≥993px) */
+  
+  #encabezado {
+      height: 15vh;
+      width: 95%;
+  }
+  #imgLogo{
+    width: 100px;
+    height: 100px;
+  }
+  #contenido{
+    height: 75vh;
+  }
+  h1{
+    font-size: 42px;
+    margin: 0px;  
+  }
+  #formularioNuevaPartida {
+    font-size: 24px;
+    width: 50%;
+    
+  }
+
+  button{
+    width: 30%;
+    height: 50px;
+    font-size: 30px;
+
+    }
+  
+}
