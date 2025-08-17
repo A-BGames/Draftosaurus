@@ -1,0 +1,104 @@
+body{
+    margin: 0px;
+    height: 100%;
+}
+#encabezado{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: aquamarine;
+    height: 10vh;
+}
+
+#logo{
+    width: 20%;
+}
+#imgLogo{
+    width: 80px;
+    height: 80px;
+    border-radius: 40%;
+}
+
+h1{
+    font-size: 50px;
+    margin: 0px;
+}
+
+
+#contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    background: lightcyan;
+    margin: 0px;
+}
+#bienvenida{
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    font-size: 20px;
+}
+
+#partidasRecientes{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin: 0px;
+}
+
+#espacioPartidas{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    width: 40%;
+    height: 45vh;
+    border: 2px solid green; 
+    padding: 0px;
+}
+
+.partidasPausadas{
+    border: 2px solid black;
+    padding: 0px;
+    margin: 0px;
+    height: 10vh;
+    
+}
+.nombrePartida{
+    margin: 0px;
+    padding-bottom: 10px;
+}
+.datos{
+    margin: 0px;
+}
+.ver{
+    display: flex;
+    justify-content: center;
+    background: lightgreen;
+    border: none;
+    margin-top: 10px;
+}
+#volver{
+    display: flex;
+    justify-content: center;
+    background: aqua;
+    font-size: 20px;
+    height: 10vh;
+    width: 220px;
+    
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+#pieDePagina{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: aquamarine;
+    height: 10vh;
+    
+}
