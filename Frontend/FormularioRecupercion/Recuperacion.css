@@ -1,5 +1,5 @@
 @media (min-width: 320px) { /* Mobile-First (320px - 576px) */
-  body{
+    body{
     display: flex;
     justify-content: space-between;
     align-items: center;
