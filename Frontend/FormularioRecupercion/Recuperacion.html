@@ -16,16 +16,19 @@
     <main id="contenido">
     <h1>Restablecer contraseña</h1>
     <form id="formularioNuevoJugador">
-      <label for="correo">Correo Electronico:</label>
-      <input type="text" id="correo" required><br>
-      <label for="contraseña">Contraseña:</label>
-      <input type="password" id="contraseña" required><br>
+      <label for="medio">Medio de recuperacion:</label>
+      <select id="medio" required>
+        <option value="" disabled selected>Seleccione...</option>
+        <option value="2">Mail</option>
+        <option value="3">Celular</option>
+      </select>
+      <div id="datosRecuperacion"></div>
       <br>
       <button type="submit">Restablecer</button>
       
     </form>
       
-   
+   <script src="formularioRecuperacion.js"></script>
   </main>
   <footer id="pieNuevaPartida">
     <p id="derechos">Todos los derechos reservados por A-B GAMES S.A.S</p>
