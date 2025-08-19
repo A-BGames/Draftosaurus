@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="inicioSesion.css">
-    <title>Inicio de Sesion</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="inicioSesion.css">
+  <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Boogaloo&display=swap" rel="stylesheet">
+  <title>Inicio de Sesion</title>
 </head>
 <body>
-    <header id="encabezado">
-        <div id="logo">
-            <img id="imgLogo" src="../../Imagenes/Logo_de_empresa-removebg-preview - copia.png" alt="dino"/>
-        </div>
-        <h1>AB-Games</h1>
-    </header>
-    <main id="contenido">
+  <header id="encabezado">
+    <div id="logo">
+      <img id="imgLogo" src="../../Imagenes/Logo_de_empresa-removebg-preview - copia.png" alt="dino"/>
+    </div>
+    <h1>AB-Games</h1>
+  </header>
+  <main id="contenido">
     <h1>Inicio de Sesion</h1>
-    <form id="formularioNuevoJugador">
-      <label for="nombreJugador">Nombre de Usuario:</label>
+    <form id="formularioInicioSesion" action="../InicioJuego/inicioJuego.html" method="post">
+      <label id="etiqueta" for="nombreJugador">Nombre de Usuario:</label>
       <input type="text" id="nombreJugador" required><br>
-      <label for="contraseña">Contraseña:</label>
+      <label id="etiqueta" for="contraseña">Contraseña:</label>
       <input type="password" id="contraseña" required><br>
       <br>
       <button type="submit">Ingresar</button>
       <br>
-      <a href="../Registro/registro.html">Aun no tienes una cuenta? Registrate aqui</a>
+      <a class="enlaceInicio" href="../Registro/registro.html">Aun no tienes una cuenta? Registrate aqui</a>
       <br>
-      <a href="../FormularioRecupercion/Recuperacion.html">Olvidaste tu contraseña? Recuperala</a>
-    </form>
-      
-   
+      <a class="enlaceInicio" href="../FormularioRecupercion/Recuperacion.html">Olvidaste tu contraseña? Recuperala</a>
+    </form>  
   </main>
-  <footer id="pieNuevaPartida">
+  <footer id="pieInicioSesion">
     <p id="derechos">Todos los derechos reservados por A-B GAMES S.A.S</p>
   </footer>
       
