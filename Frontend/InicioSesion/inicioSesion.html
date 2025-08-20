@@ -19,18 +19,18 @@
   </header>
   <main id="contenido">
     <h1>Inicio de Sesion</h1>
-    <form id="formularioInicioSesion" action="../InicioJuego/inicioJuego.html" method="post">
-      <label id="etiqueta" for="nombreJugador">Nombre de Usuario:</label>
-      <input type="text" id="nombreJugador" required><br>
-      <label id="etiqueta" for="contraseña">Contraseña:</label>
-      <input type="password" id="contraseña" required><br>
-      <br>
-      <button type="submit">Ingresar</button>
-      <br>
-      <a class="enlaceInicio" href="../Registro/registro.html">Aun no tienes una cuenta? Registrate aqui</a>
-      <br>
-      <a class="enlaceInicio" href="../FormularioRecupercion/Recuperacion.html">Olvidaste tu contraseña? Recuperala</a>
-    </form>  
+    <form id="formularioInicioSesion" action="../../Backend/login.php" method="post">
+  <label class="etiqueta" for="nombreJugador">Nombre de Usuario:</label>
+  <input type="text" id="nombreJugador" name="username" required><br>
+  <label class="etiqueta" for="contraseña">Contraseña:</label>
+  <input type="password" id="contraseña" name="password" required><br>
+  <br>
+  <button type="submit">Ingresar</button>
+  <br>
+  <a class="enlaceInicio" href="../Registro/registro.html">Aun no tienes una cuenta? Registrate aqui</a>
+  <br>
+  <a class="enlaceInicio" href="../FormularioRecupercion/Recuperacion.html">Olvidaste tu contraseña? Recuperala</a>
+</form> 
   </main>
   <footer id="pieInicioSesion">
     <p id="derechos">Todos los derechos reservados por A-B GAMES S.A.S</p>

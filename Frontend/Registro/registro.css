@@ -49,8 +49,20 @@
   font-family: "Henny Penny", system-ui;
   color: #e9c46a;
   text-shadow: 2px 2px 4px black;
-  font-size: 14px;
+  
   text-align: center;
+}
+
+.etiqueta {
+  font-family: "Henny Penny", system-ui;
+  color: #e9c46a;
+  text-shadow: 2px 2px 4px black;
+  font-size: 18px;
+}
+
+.enlaceInicio{
+  font-size: 12px;
+  text-decoration: none;
 }
 
 button{
