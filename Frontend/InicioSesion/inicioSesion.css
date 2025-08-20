@@ -22,6 +22,7 @@
   #imgLogo {
     width: 50px;
     height: 50px;
+    margin-top: 5px;
   }
   #contenido{
     display: flex;
@@ -52,7 +53,7 @@
   text-align: center;
 }
 
-#etiqueta {
+.etiqueta {
   font-family: "Henny Penny", system-ui;
   color: #e9c46a;
   text-shadow: 2px 2px 4px black;
@@ -109,12 +110,9 @@ button{
   h1{
     font-size: 40px;
   }
-  #formularioInicioSesion {
+
+  .etiqueta {
     font-size: 24px;
-    
-  }
-  #etiqueta {
-    font-size: 25px;
   }
   button{
     width: 60%;
@@ -124,10 +122,10 @@ button{
     border-radius: 10px;
   }
     
-    .enlaceInicio{
-        font-size: 16px;
-        text-decoration: none;
-    }
+  .enlaceInicio{
+    font-size: 16px;
+    text-decoration: none;
+  }
 
     #derechos{
         font-size: 24px;
@@ -151,11 +149,12 @@ button{
     margin: 0px;  
   }
   #formularioInicioSesion {
-    font-size: 24px;
     width: 50%;
     
   }
-
+.etiqueta {
+    font-size: 30px;
+  }
   button{
     width: 50%;
     height: 50px;
@@ -164,5 +163,9 @@ button{
     border-radius: 10px;
 
     }
+    .enlaceInicio{
+    font-size: 20px;
+    text-decoration: none;
+  }
   
 }
