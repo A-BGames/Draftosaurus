@@ -19,18 +19,22 @@
     <main id="contenido">
     <h1>Registro</h1>
     <form id="formularioRegistro" action="../../Backend/registro.php" method="post">
-  <label class="etiqueta" for="nombreCompleto">Nombre Completo:</label>
-  <input type="text" id="nombreCompleto" name="nombreCompleto" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,50}$" title="Mínimo 3 letras" required><br>
-  <label class="etiqueta" for="nombreJugador">Nombre de Usuario:</label>
-  <input type="text" id="nombreJugador" name="nombreJugador" pattern="^[a-zA-Z0-9._%+ÁÉÍÓÚáéíóúÑñ\-ñÑáéíóúÁÉÍÓÚ\s]{3,50}$" title="Mínimo 3 letras" required><br>
+      <label class="etiqueta" for="primer_nombre">Primer Nombre:</label>
+  <input type="text" id="primer_nombre" name="primer_nombre" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,20}$" title="Mínimo 3 letras" required><br>
+  <label class="etiqueta" for="apellido_paterno">Apellido Paterno:</label>
+  <input type="text" id="apellido_paterno" name="apellido_paterno" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,20}$" title="Mínimo 3 letras" required><br>
+  <label class="etiqueta" for="apellido_materno">Apellido Materno:</label>
+  <input type="text" id="apellido_materno" name="apellido_materno" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,20}$" title="Mínimo 3 letras" required><br>
+  <label class="etiqueta" for="nombre_usuario">Nombre de Usuario:</label>
+  <input type="text" id="nombre_usuario" name="nombre_usuario" pattern="^[a-zA-Z0-9._%+ÁÉÍÓÚáéíóúÑñ\-ñÑáéíóúÁÉÍÓÚ\s]{3,50}$" title="Mínimo 3 letras" required><br>
   <label class="etiqueta" for="contraseña">Contraseña:</label>
   <input type="password" id="contraseña" name="contraseña" pattern=".{7,}" title="Mínimo 7 caracteres" required><br> 
-  <label class="etiqueta" for="correoJugador">Correo Electronico:</label>
-  <input type="email" id="correoJugador" name="correoJugador" pattern="^[a-zA-Z0-9._%+\-ñÑáéíóúÁÉÍÓÚ]{2,30}@[a-zA-Z]{2,12}\.[a-zA-Z.]{2,12}$" title="El formato debe ser de2caracteresa30@de2letrasa12.de2letrasa12" required><br>
-  <label class="etiqueta" for="celularJugador">Telefono/Celular:</label>
-  <input type="text" id="celularJugador" name="celularJugador" pattern="^09[1-9][0-9]{6}$" title="El numero debe tener exactamente 9 carateres y empezar por 09 y el 3er digito debe ser del 1 al 9" required><br>
-  <label class="etiqueta" for="fechaNacimiento">Fecha de Nacimiento:</label>
-  <input type="date" id="fechaNacimiento" name="fechaNacimiento" max="2017-12-31" required><br>
+  <label class="etiqueta" for="correo">Correo Electronico:</label>
+  <input type="email" id="correo" name="correo" pattern="^[a-zA-Z0-9._%+\-ñÑáéíóúÁÉÍÓÚ]{2,30}@[a-zA-Z]{2,12}\.[a-zA-Z.]{2,12}$" title="El formato debe ser de2caracteresa30@de2letrasa12.de2letrasa12" required><br>
+  <label class="etiqueta" for="celular">Celular: +598</label>
+  <input type="text" id="celular" name="celular" pattern="^9[1-9][0-9]{6}$" title="El numero debe tener exactamente 8 carateres y empezar por 9 y el 3er digito debe ser del 1 al 9" required><br>
+  <label class="etiqueta" for="fecha_nacimiento">Fecha de Nacimiento:</label>
+  <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" max="2017-12-31" required><br>
  
   <button type="submit">Registrarse</button>
   <br>

@@ -17,19 +17,19 @@
   </header>
   <main id="contenido">
     <h1>Crear Nueva Partida</h1>
-    <form id="formularioNuevaPartida">
-      <label for="nombrePartida">Nombre de la partida:</label>
-      <input type="text" id="nombrePartida" required><br>
-      <label for="modoJuego">Modo de juego </label>
-      <select id="modoJuego" required>
+    <form id="formularioNuevaPartida" action="../../Backend/crearPartida.php" method="POST">
+      <label for="nombre_partida">Nombre de la partida:</label>
+      <input type="text" id="nombre_partida" required><br>
+      <label for="id_modo">Modo de juego </label>
+      <select id="id_modo" required>
         <option value="" disabled selected>Seleccione...</option>
-        <option value="2">Normal</option>
+        <option value="1">Estandar</option>
+        <option value="2">Hardcore</option>
         <option value="3">Asistido</option>
-        <option value="4">Hardcore</option>
       </select>
       <br>
       <label for="numeroJugadores">Número de jugadores:</label>
-      <select id="numeroJugadores" required>
+      <select id="numeroJugadores" name="numeroJugadores" required>
         <option value="" disabled selected>Seleccione...</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -44,11 +44,11 @@
 
     </form>
       
-    <script src="formularioPartida.js"></script>
+    
   </main>
   <footer id="pieNuevaPartida">
     <p id="derechos">Todos los derechos reservados por A-B GAMES S.A.S</p>
   </footer>
-      
+      <script src="formularioPartida.js"></script>
 </body>
 </html>

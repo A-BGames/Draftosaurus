@@ -2,7 +2,7 @@ const partidas = JSON.parse(localStorage.getItem("partidasGuardadas")) || [];
 const contendeorPartidas = document.getElementById("espacioPartidas");
 
 partidas
-  .filter(p => Array.isArray(p.jugadores)) // ← solo las partidas válidas
+  .filter(p => Array.isArray(p.jugadores))
   .forEach(partida => {
     const tarjeta = document.createElement("div");
     tarjeta.classList.add("partidasPausadas");

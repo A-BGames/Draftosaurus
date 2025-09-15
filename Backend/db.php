@@ -1,9 +1,9 @@
 <?php
-//coneccion a base de datos
+//coneccion a la base de datos
 $host = "localhost";
 $usuario = "root";
 $contrasena = ""; 
-$base_de_datos = "draftosaurus"; 
+$base_de_datos = "draftosauruss"; 
 
 $conn = new mysqli($host, $usuario, $contrasena, $base_de_datos);
 

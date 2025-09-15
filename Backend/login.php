@@ -1,20 +1,23 @@
 <?php
 include 'db.php';
-// Si el formulario fue enviado por POST, toma el username y password
+session_start();
+
+// Si el formulario fue enviado por POST, toma el usuario y contraseña
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'] ?? '';
-    $password = $_POST['password'] ?? '';
+    $usuario = $_POST['usuario'] ?? '';
+    $contraseña = $_POST['contraseña'] ?? '';
 
     //Consulta el usuario en la base de datos, evitando inyecciones SQL
-    $sql = "SELECT * FROM jugador WHERE nombreUsuario = ?";
+    $sql = "SELECT * FROM jugador WHERE nombre_usuario = ?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $username);
+    $stmt->bind_param("s", $usuario);
     $stmt->execute();
     $resultado = $stmt->get_result();
 
     if ($usuario = $resultado->fetch_assoc()) {
         
-       if (password_verify($password, $usuario['Contraseña'])) {
+       if (password_verify($contraseña, $usuario['contraseña'])) {
+        $_SESSION['usuario'] = $usuario['nombre_usuario'];
         header("Location: ../Frontend/Index/index.html");
         exit();
         } else {
