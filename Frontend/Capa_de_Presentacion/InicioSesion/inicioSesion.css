@@ -1,5 +1,5 @@
 @media (min-width: 320px) { /* Mobile-First (320px - 576px) */
-    body{
+  body{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -7,7 +7,7 @@
     margin: 0px;
     height: 100vh;
     width: 100%;
-    background-image:url('../../Imagenes/Fondo-Index.png');
+    background-image:url('../../../Imagenes/Fondo-Index.png');
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 
@@ -22,6 +22,7 @@
   #imgLogo {
     width: 50px;
     height: 50px;
+    margin-top: 5px;
   }
   #contenido{
     display: flex;
@@ -40,7 +41,7 @@
    margin: 0px;
   
 }
-#formularioNuevoJugador {
+#formularioInicioSesion {
   padding-left: 10px;
   background: #91a492;
   width: 80%;
@@ -49,8 +50,19 @@
   font-family: "Henny Penny", system-ui;
   color: #e9c46a;
   text-shadow: 2px 2px 4px black;
-  font-size: 14px;
   text-align: center;
+}
+
+.etiqueta {
+  font-family: "Henny Penny", system-ui;
+  color: #e9c46a;
+  text-shadow: 2px 2px 4px black;
+  font-size: 18px;
+}
+
+.enlaceInicio{
+  font-size: 12px;
+  text-decoration: none;
 }
 
 button{
@@ -67,7 +79,7 @@ button{
 
 }
 
-  #pieNuevaPartida {
+  #pieInicioSesion {
         display: flex;
         align-items: center;
         background: transparent;
@@ -98,9 +110,9 @@ button{
   h1{
     font-size: 40px;
   }
-  #formularioNuevoJugador {
+
+  .etiqueta {
     font-size: 24px;
-    
   }
   button{
     width: 60%;
@@ -109,16 +121,12 @@ button{
     margin-bottom: 10px;
     border-radius: 10px;
   }
-    #bienvenida{
-        font-size: 28px;    
-        width: 95%;
-    }
-    #tituloMenu {
-        font-size: 42px;
-    }
-    a{
-        font-size: 28px;
-    }
+    
+  .enlaceInicio{
+    font-size: 16px;
+    text-decoration: none;
+  }
+
     #derechos{
         font-size: 24px;
     } 
@@ -140,12 +148,13 @@ button{
     font-size: 42px;
     margin: 0px;  
   }
-  #formularioNuevoJugador {
-    font-size: 24px;
+  #formularioInicioSesion {
     width: 50%;
     
   }
-
+.etiqueta {
+    font-size: 30px;
+  }
   button{
     width: 50%;
     height: 50px;
@@ -154,5 +163,9 @@ button{
     border-radius: 10px;
 
     }
+    .enlaceInicio{
+    font-size: 20px;
+    text-decoration: none;
+  }
   
 }

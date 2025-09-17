@@ -1,5 +1,5 @@
 @media (min-width: 320px) { /* Mobile-First (320px - 576px) */
-  body{
+    body{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -7,7 +7,7 @@
     margin: 0px;
     height: 100vh;
     width: 100%;
-    background-image:url('../../Imagenes/Fondo-Index.png');
+    background-image:url('../../../Imagenes/Fondo-Index.png');
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 
@@ -40,7 +40,7 @@
    margin: 0px;
   
 }
-#formularioNuevaPartida {
+#formularioNuevoJugador {
   padding-left: 10px;
   background: #91a492;
   width: 80%;
@@ -98,7 +98,7 @@ button{
   h1{
     font-size: 40px;
   }
-  #formularioNuevaPartida {
+  #formularioNuevoJugador {
     font-size: 24px;
     
   }
@@ -140,7 +140,7 @@ button{
     font-size: 42px;
     margin: 0px;  
   }
-  #formularioNuevaPartida {
+  #formularioNuevoJugador {
     font-size: 24px;
     width: 50%;
     

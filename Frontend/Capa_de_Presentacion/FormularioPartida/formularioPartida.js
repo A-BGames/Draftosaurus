@@ -7,11 +7,11 @@ let todosLosUsuarios = [];
 // Cargar usuario actual y lista de todos los usuarios
 async function cargarDatosUsuarios() {
   try {
-    const resUsuario = await fetch("../../Backend/usuarioActual.php");
+    const resUsuario = await fetch("../../../Backend/Capa_de_Datos/usuarioActual.php");
     const dataUsuario = await resUsuario.json();
     usuario_actual = dataUsuario.usuario;
 
-    const resUsuarios = await fetch("../../Backend/listaUsuarios.php");
+    const resUsuarios = await fetch("../../../Backend/Capa_de_Datos/listaUsuarios.php");
     todosLosUsuarios = await resUsuarios.json();
 
     // Elimina el usuario actual de la lista
@@ -87,7 +87,7 @@ document.getElementById("formularioNuevaPartida").addEventListener("submit", asy
   }
 
   try {
-    const res = await fetch("../../Backend/crearPartida.php", {
+    const res = await fetch("../../../Backend/Capa_de_Datos/crearPartida.php", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ nombre_partida, id_modo, jugadores: nombresJugadores })

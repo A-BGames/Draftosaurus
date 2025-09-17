@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("ssssssss", $primer_nombre, $apellido_paterno, $apellido_materno, $nombre_usuario, $contraseñaHash, $correo, $celular, $fecha_nacimiento);
 
     if ($stmt->execute()) {
-        echo "<script>alert('Registro exitoso.'); window.location.href='../Frontend/InicioSesion/inicioSesion.html';</script>";
+        echo "<script>alert('Registro exitoso.'); window.location.href='../../Frontend/Capa_de_Presetacion/InicioSesion/inicioSesion.html';</script>";
     } else {
         echo "<script>alert('Error al registrar.'); window.history.back();</script>";
     }

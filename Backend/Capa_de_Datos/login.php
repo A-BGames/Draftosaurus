@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
        if (password_verify($contraseña, $usuario['contraseña'])) {
         $_SESSION['usuario'] = $usuario['nombre_usuario'];
-        header("Location: ../Frontend/Index/index.html");
+        header("Location: ../../Frontend/Capa_de_Presentacion/Index/index.html");
         exit();
         } else {
             echo "<script>alert('Contraseña incorrecta.'); window.history.back();</script>";
