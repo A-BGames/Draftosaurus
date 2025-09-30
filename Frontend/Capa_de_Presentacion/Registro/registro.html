@@ -18,7 +18,7 @@
     </header>
     <main id="contenido">
     <h1>Registro</h1>
-    <form id="formularioRegistro" action="../../Backend/Capa_de_Datos/registro.php" method="post">
+    <form id="formularioRegistro" action="../../../Backend/Capa_de_Datos/registro.php" method="post">
       <label class="etiqueta" for="primer_nombre">Primer Nombre:</label>
   <input type="text" id="primer_nombre" name="primer_nombre" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,20}$" title="Mínimo 3 letras" required><br>
   <label class="etiqueta" for="apellido_paterno">Apellido Paterno:</label>
@@ -32,7 +32,7 @@
   <label class="etiqueta" for="correo">Correo Electronico:</label>
   <input type="email" id="correo" name="correo" pattern="^[a-zA-Z0-9._%+\-ñÑáéíóúÁÉÍÓÚ]{2,30}@[a-zA-Z]{2,12}\.[a-zA-Z.]{2,12}$" title="El formato debe ser de2caracteresa30@de2letrasa12.de2letrasa12" required><br>
   <label class="etiqueta" for="celular">Celular: +598</label>
-  <input type="text" id="celular" name="celular" pattern="^9[1-9][0-9]{6}$" title="El numero debe tener exactamente 8 carateres y empezar por 9 y el 3er digito debe ser del 1 al 9" required><br>
+  <input type="text" id="celular" name="celular" pattern="^[1-9][0-9]{6}$" title="El numero debe tener 7 digitos y emepezar por un numero del 1 al 9" required><br>
   <label class="etiqueta" for="fecha_nacimiento">Fecha de Nacimiento:</label>
   <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" max="2017-12-31" required><br>
  

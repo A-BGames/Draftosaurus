@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         !preg_match('/^[A-Za-z0-9._%+ÁÉÍÓÚáéíóúÑñ]{3,20}$/', $nombre_usuario) ||
         strlen($contraseña) < 6 ||
         !filter_var($correo, FILTER_VALIDATE_EMAIL) ||
-        !preg_match('/^9[1-9][0-9]{6}$/', $celular)
+        !preg_match('/^[1-9][0-9]{6}$/', $celular)
     ) {
         echo "<script>alert('Datos inválidos.'); window.history.back();</script>";
         exit();
@@ -31,17 +31,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Inserta los datos en la base de datos de forma segura
     $conn->set_charset("utf8mb4");
-    $sql = "INSERT INTO jugador (primer_nombre, apellido_paterno, apellido_materno, nombre_usuario, contraseña, correo, celular, fecha_nacimiento)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssssssss", $primer_nombre, $apellido_paterno, $apellido_materno, $nombre_usuario, $contraseñaHash, $correo, $celular, $fecha_nacimiento);
+    $sqlJugador = "INSERT INTO jugador (primer_nombre, apellido_paterno, apellido_materno, nombre_usuario, contraseña, correo, celular)
+            VALUES (?, ?, ?, ?, ?, ?, ?)";
+    $stmtJugador = $conn->prepare($sqlJugador);
+    $stmtJugador->bind_param("sssssss", $primer_nombre, $apellido_paterno, $apellido_materno, $nombre_usuario, $contraseñaHash, $correo, $celular);
 
-    if ($stmt->execute()) {
-        echo "<script>alert('Registro exitoso.'); window.location.href='../../Frontend/Capa_de_Presetacion/InicioSesion/inicioSesion.html';</script>";
+    if ($stmtJugador->execute()) {
+        $idJugador = $conn->insert_id;
+
+        $sqlNacimiento = "INSERT INTO nacimiento_jugador (id_jugador, fecha_nacimiento) VALUES (?, ?)";
+        $stmtNacimiento = $conn->prepare($sqlNacimiento);
+        $stmtNacimiento->bind_param("is", $idJugador, $fecha_nacimiento);
+        $stmtNacimiento->execute();
+        $stmtNacimiento->close();
+
+        echo "<script>alert('Registro exitoso.'); window.location.href='../../Frontend/Capa_de_Presentacion/InicioSesion/inicioSesion.html';</script>";
     } else {
         echo "<script>alert('Error al registrar.'); window.history.back();</script>";
     }
-    $stmt->close();
+    $stmtJugador->close();
 }
 $conn->close();
 ?>

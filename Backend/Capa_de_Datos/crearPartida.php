@@ -15,10 +15,9 @@ $jugadores = $data['jugadores']; // array de nombres
 $fechaHoy = date('Y-m-d');
 $id_estado = 1;
 
-// crear la partida
-$sql = "INSERT INTO partida (nombre_partida, fecha, id_modo, id_estado) VALUES (?, ?, ?, ?)";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("ssii", $nombre_partida, $fechaHoy, $id_modo, $id_estado);
+// Crea la partida
+$stmt = $conn->prepare("INSERT INTO partida (nombre_partida, id_modo, id_estado) VALUES (?, ?, ?)");
+$stmt->bind_param("sii", $nombre_partida, $id_modo, $id_estado);
 
 if (!$stmt->execute()) {
     echo json_encode(['success' => false, 'error' => $stmt->error]);
@@ -26,42 +25,73 @@ if (!$stmt->execute()) {
 }
 
 $partidaId = $stmt->insert_id;
+$stmt->close();
 
-// Asosiar jugadores y su puntaje
-$sqlJugador = "INSERT INTO partida_jugador (id_partida, id_jugador, puntaje) VALUES (?, ?, 0)";
-$stmtJugador = $conn->prepare($sqlJugador);
+// Inserta la fecha
+$stmtFecha = $conn->prepare("INSERT INTO fecha_partida (id_partida, fecha) VALUES (?, ?)");
+$stmtFecha->bind_param("is", $partidaId, $fechaHoy);
+$stmtFecha->execute();
+$stmtFecha->close();
 
-// Asosiar tableros
-$sqlTableroPartida = "INSERT INTO tablero_partida_jugador (id_tablero, id_partida, id_jugador) VALUES (?, ?, ?)";
-$stmtTableroPartida = $conn->prepare($sqlTableroPartida);
+// Asocia la partida con la ronda
+$idRonda = 1;
+$stmtRondaPartida = $conn->prepare("INSERT INTO ronda_partida (id_ronda, id_partida) VALUES (?, ?)");
+$stmtRondaPartida->bind_param("ii", $idRonda, $partidaId);
+$stmtRondaPartida->execute();
+$stmtRondaPartida->close();
 
-// Asosiar turnos
-$sqlTurnoJugador = "INSERT INTO turno_partida_jugador (id_partida, id_turno, id_jugador) VALUES (?, ?, ?)";
-$stmtTurno = $conn->prepare($sqlTurnoJugador);
 
-$tableroId = 1; 
+$stmtJugador = $conn->prepare("INSERT INTO partida_jugador (id_partida, id_jugador, puntaje) VALUES (?, ?, 0)");
+$stmtTableroPartida = $conn->prepare("INSERT INTO tablero_partida_jugador (id_tablero, id_partida, id_jugador) VALUES (?, ?, ?)");
+$stmtTurnoPartidaJugador = $conn->prepare("INSERT INTO turno_partida_jugador (id_partida, id_turno, id_jugador) VALUES (?, ?, ?)");
+$stmtCrearTablero = $conn->prepare("INSERT INTO tablero (nro_tablero) VALUES (?)");
+
+
+$tableroNum = 1;
+$idTurno = 1; 
+
 foreach ($jugadores as $nombreUsuario) {
-    $sqlId = "SELECT id_jugador FROM jugador WHERE nombre_usuario = ?";
-    $stmtId = $conn->prepare($sqlId);
+    // Obtiene id del jugador
+    $stmtId = $conn->prepare("SELECT id_jugador FROM jugador WHERE nombre_usuario = ?");
     $stmtId->bind_param("s", $nombreUsuario);
     $stmtId->execute();
     $result = $stmtId->get_result()->fetch_assoc();
+    $stmtId->close();
+
     if ($result) {
         $idJugador = $result['id_jugador'];
+
+        // Crea el tablero para cada jugador
+        $stmtCrearTablero->bind_param("i", $tableroNum);
+        $stmtCrearTablero->execute();
+        $tableroId = $conn->insert_id;
+
+        // Asocia un jugador a la partida
         $stmtJugador->bind_param("ii", $partidaId, $idJugador);
         $stmtJugador->execute();
-        
+
+        // Asocia un tablero a la partida y a un jugador
         $stmtTableroPartida->bind_param("iii", $tableroId, $partidaId, $idJugador);
         $stmtTableroPartida->execute();
 
-        $tableroId++;
-        
-        $idTurno = 1;
-        $stmtTurno->bind_param("iii", $partidaId, $idTurno, $idJugador);
-        $stmtTurno->execute();
+        // Asocia el turno a la partida y a un jugador
+        $stmtTurnoPartidaJugador->bind_param("iii", $partidaId, $idTurno, $idJugador);
+        $stmtTurnoPartidaJugador->execute();
+
+        $tableroNum++;
     }
 }
 
+// Guarda la partida en sesión
 $_SESSION['partida_id'] = $partidaId;
+
+
 echo json_encode(['success' => true, 'idPartida' => $partidaId]);
+
+
+$stmtJugador->close();
+$stmtTableroPartida->close();
+$stmtTurnoPartidaJugador->close();
+$stmtCrearTablero->close();
+$conn->close();
 ?>
