@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Recuperacion.css">
+    <title>Restablecer contraseña</title>
+</head>
+<body>
+    <header id="encabezado">
+        <div id="logo">
+            <img id="imgLogo" src="../../../Imagenes/Logo_de_empresa-removebg-preview - copia.png" alt="dino"/>
+        </div>
+    </header>
+    <main id="contenido">
+    <h1>Restablecer contraseña</h1>
+    <form id="formularioNuevoJugador">
+      <label for="medio">Medio de recuperacion:</label>
+      <select id="medio" required>
+        <option value="" disabled selected>Seleccione...</option>
+        <option value="2">Mail</option>
+        <option value="3">Celular</option>
+      </select>
+      <div id="datosRecuperacion"></div>
+      <br>
+      <button type="submit">Restablecer</button>
+      
+    </form>
+      
+   <script src="formularioRecuperacion.js"></script>
+  </main>
+  <footer id="pieNuevaPartida">
+    <p id="derechos">Todos los derechos reservados por A-B GAMES S.A.S</p>
+  </footer>
+      
+</body>
+</html>
