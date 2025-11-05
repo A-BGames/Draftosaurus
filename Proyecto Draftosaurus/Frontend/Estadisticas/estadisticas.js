@@ -1,48 +1,38 @@
-// Recuperamos el ranking guardado (lista de jugadores)
-const ranking = JSON.parse(localStorage.getItem("rankingDraftosaurus")) || [];
+const ctx = document.getElementById("grafico").getContext("2d");
 
-// Inicializamos conteos de partidas
-let jugadoresConMasDe7 = 0;
-let jugadoresSinMasDe7 = 0;
+const partidas = JSON.parse(localStorage.getItem("partidasGuardadas")) || [];
 
-const jugadoresPorRanking = 1; 
-let tempPartida = [];
+let jugadoresMayores = 0;
+let jugadoresMenores = 0;
 
-for (let i = 0; i < ranking.length; i++) {
-  tempPartida.push(ranking[i]);
-  
-  // Cada bloque de 1 o el último bloque se considera un jugador
-  if (tempPartida.length === jugadoresPorRanking || i === ranking.length - 1) {
-    // Verificamos si algún jugador tiene más de 7 puntos
-    const algunoConMasDe7 = tempPartida.some(jugador => jugador.puntos > 7);
-    if (algunoConMasDe7) {
-        jugadoresConMasDe7++;
+partidas.forEach(partida => {
+  partida.jugadores.forEach(jugador => {
+    if (jugador.puntos > 7) {
+      jugadoresMayores++;
     } else {
-        jugadoresSinMasDe7++;
+      jugadoresMenores++;
     }
-    tempPartida = [];
-  }
-}
-
-// Graficar con Chart.js
-const ctx = document.getElementById("graficoEstadisticas").getContext("2d");
+  });
+});
 
 new Chart(ctx, {
-  type: 'pie',
+  type: "pie",
   data: {
-    labels: ['Jugadores con >7 puntos', 'Jugadores con ≤7 puntos'],
+    labels: ["Jugadores con más de 7 puntos", "Jugadores con 7 o menos puntos"],
     datasets: [{
-      data: [jugadoresConMasDe7, jugadoresSinMasDe7],
-      backgroundColor: ['green', 'red'],
-      borderColor: '#fff',
+      data: [jugadoresMayores, jugadoresMenores],
+      backgroundColor: ["#91a492", "#e9c46a"],
+      borderColor: ["#182b23", "#182b23"],
       borderWidth: 2
     }]
   },
   options: {
     responsive: true,
     plugins: {
-      legend: { position: 'bottom' },
-      tooltip: { enabled: true }
+      legend: {
+        position: "bottom",
+        labels: { color: "#182b23", font: { family: "Boogaloo", size: 16 } }
+      }
     }
   }
 });

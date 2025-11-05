@@ -1,190 +1,126 @@
-@media (min-width: 320px) { /* Mobile-First (320px - 576px) */
-    body{
-        width: 100%;
-
-    }
-    #tablerosContainer{
-        width: 320px;
-
-    }
-    .tableroJugador {
-        position: relative;
-        border: 2px solid #444;
-        
-        padding: 10px;
-        max-width: 320px;
-    }
-    .contenedorTablero {
-        position: relative;
-        width: 300px;
-        height: 150px;
-    }
-    .tablero{
-        position: relative;
-        width: 300px;
-        height: 150px;
-        z-index: 1;
-    }
-    .ficha{
-    width: 17px;
-    height: 18px;
-    
-}
-.zonas {
-  position: absolute;
-  /* Usa clases específicas como .zona1, .zona2 en CSS para ubicar bien */
+/* ======= FONDO ======= */
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../../../Imagenes/Fondo-Index.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Boogaloo", sans-serif;
+  display: flex;
+  justify-content: center;
 }
 
-/* Ejemplo: */
-.zonas[data-zona="zona1"] { top: 7px; left: 14px; width: 102px; height: 32px; }
-.zonas[data-zona="zona2"] { top: 14px;
-    left: 200px;
-    width: 41px;
-    height: 17px; }
-.zonas[data-zona="zona3"] { top: 55px;
-    left: 18px;
-    width: 70px;
-    height: 35px; }
-.zonas[data-zona="zona4"] { top: 60px;
-    left: 180px;
-    width: 102px;
-    height: 35px;}
-.zonas[data-zona="zona5"] { top: 102px;
-    left: 32px;
-    width: 72px;
-    height: 37px;  }
-.zonas[data-zona="zona6"] { top: 100px;
-    left: 225px;
-    width: 62px;
-    height:27px;  }
-.zonas[data-zona="zona7"] { top: 110px;
-    left: 137px;
-    width: 62px;
-    height:27px;  }
-/* Y así con cada zona */
-
-
-.zonas{
-    position: absolute;
-    width: 100px;
-    height: 60px;
-    
-    z-index: 2;
-
-}
+/* ======= CONTENEDOR PRINCIPAL ======= */
+#tablerosContainer {
+  width: 95%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-@media (min-width: 577px) { /* Tabletas (577px - 992px) */
+/* ======= BOTONERA GLOBAL ======= */
+#botonesGlobales {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  padding: 10px;
+  background: #fffbe628;
+  border: 3px solid #91a492;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+#botonesGlobales button {
+  background: #91a492;
+  color: #e9c46a;
+  border: 2px solid #182b23;
+  border-radius: 10px;
+  padding: 8px 18px;
+  font-family: "Henny Penny", system-ui;
+  font-size: 20px;
+  text-shadow: 1px 1px 2px black;
+  cursor: pointer;
+}
+
+#dadoGlobal {
+  width: 60px;
+  height: 60px;
+}
+
+#turnoActualTexto {
+  font-family: "Henny Penny", system-ui;
+  font-size: 26px;
+  color: #ffaa33;
+  text-shadow: 2px 2px 4px black;
+}
+
+/* ======= TABLEROS DE JUGADORES ======= */
 .tableroJugador {
-  position: relative;
-  border: 2px solid #444;
-  margin: 30px auto;
-  padding: 20px;
-  max-width: 900px;
+  background: #fffbe628;
+  border: 3px solid #91a492;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.nombreJugador {
+  font-family: "Henny Penny", system-ui;
+  font-size: 32px;
+  text-align: center;
+  color: #ffaa33;
+  text-shadow: 2px 2px 4px black;
+  margin-bottom: 10px;
 }
 
 .contenedorTablero {
   position: relative;
-  width: 900px;
-  height: 450px;
-}
-    .tablero{
-        position: relative;
-        width: 900px;
-        height: 450px;
-        z-index: 1;
-    }
-    .fichas{
-    width: 40px;
-    height: 42px;
-    
-}
-}
-@media (min-width: 993px) { /* Escritorio (≥993px) */
-    .tableroJugador {
-  position: relative;
-  border: 2px solid #444;
-  margin: 30px auto;
-  padding: 20px;
-  max-width: 900px;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
 }
 
-.contenedorTablero {
-  position: relative;
-  width: 900px;
-  height: 450px;
+.tablero {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
-    .tablero{
-        position: relative;
-        width: 900px;
-        height: 450px;
-        z-index: 1;
-    }
-    .fichas{
-    width: 67px;
-    height: 70px;
-    
-}
+/* ======= ZONAS DONDE SE SUELTAN LAS FICHAS ======= */
 .zonas {
   position: absolute;
-  /* Usa clases específicas como .zona1, .zona2 en CSS para ubicar bien */
+  border: 2px dashed transparent;
+  width: 15%;
+  height: 15%;
+  cursor: pointer;
 }
 
-/* Ejemplo: */
-.zonas[data-zona="zona1"] { top: 30px; left: 57px; width: 410px; height: 130px; }
-.zonas[data-zona="zona2"] { top: 55px;
-    left: 800px;
-    width: 165px;
-    height: 70px; }
-.zonas[data-zona="zona3"] { top: 220px;
-    left: 75px;
-    width: 280px;
-    height: 140px; }
-.zonas[data-zona="zona4"] { top: 240px;
-    left: 720px;
-    width: 410px;
-    height: 140px;}
-.zonas[data-zona="zona5"] { top: 410x;
-    left: 130px;
-    width: 290px;
-    height: 150px;  }
-.zonas[data-zona="zona6"] { top: 400px;
-    left: 900px;
-    width: 250px;
-    height:110px;  }
-.zonas[data-zona="zona7"] { top: 440px;
-    left: 550px;
-    width: 250px;
-    height:110px;  }
-/* Y así con cada zona */
-
-
-
-
-.zonas{
-    position: absolute;
-    width: 100px;
-    height: 60px;
-    
-    z-index: 2;
-
-}
+/* Mantener invisibles pero interactuables */
+.zonas:hover {
+  border-color: #ffaa33;
 }
 
-
-
-
-
-#contador{
-    font-size: 15px;
-    color: black;
-    background: greenyellow;
-    width: 67px;
-    height: 70px;
+/* ======= FICHAS ======= */
+.fichasContainer {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
-#contenedorFicha{
-    
-    width: 65px;
-    background: blanchedalmond;
+
+.ficha {
+  width: 40px;
+  cursor: grab;
+}
+
+.contador {
+  text-align: center;
+  font-family: "Henny Penny";
+  font-size: 22px;
+  color: #e9c46a;
+  text-shadow: 1px 1px 3px black;
+  margin-bottom: 5px;
 }
