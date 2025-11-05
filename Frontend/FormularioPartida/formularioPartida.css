@@ -1,0 +1,201 @@
+/* ======== Base (PC por defecto) ======== */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('../../Imagenes/Fondo-Index.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  height: 20vh;
+  width: 95%;
+}
+
+#imgLogo {
+  width: 100px;
+  height: 100px;
+}
+
+h1 {
+  font-size: 50px;
+  margin: 0;
+  font-family: "Henny Penny", system-ui;
+  text-shadow: 2px 2px 4px black;
+  color: #ffaa33;
+}
+
+#formularioNuevaPartida {
+  border: 3px solid #5c8a4f;
+  border-radius: 15px;
+  background-color: #fffbe628;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  padding: 25px;
+  width: 50%;
+  text-align: center;
+}
+
+#formularioNuevaPartida label {
+  display: block;
+  margin: 10px 0 5px;
+  font-family: "Henny Penny", system-ui;
+  color: #d84f19;
+  text-shadow: 1px 1px 3px black;
+  font-size: 35px;
+}
+
+#formularioNuevaPartida input,
+#formularioNuevaPartida select {
+  width: 80%;
+  border-radius: 8px;
+  border: 2px solid #8e9491;
+  padding: 8px;
+  font-family: "Boogaloo", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #182b23;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #91a492;
+  color: #e9c46a;
+  border: 2px solid #8e9491;
+  border-radius: 10px;
+  text-shadow: 1px 1px 2px black;
+  font-family: "Henny Penny", system-ui;
+  font-size: 20px;
+  padding: 10px 30px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.volver-boton {
+  color: #e9c46a;
+  background: #91a492;
+  border-color: #182b23;
+  font-family: "Henny Penny", system-ui;
+  font-size: 18px;
+  padding: 8px 24px;
+  border-radius: 10px;
+  text-shadow: 1px 1px 2px black;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+#pieNuevaPartida {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  width: 100%;
+  min-height: 5vh;
+  margin-top: auto;
+}
+
+#derechos {
+  font-size: 22px;
+  margin: 0;
+  width: 100%;
+  color: beige;
+  text-align: center;
+  text-shadow: 1px 1px 2px black;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* ======== CELULAR ======== */
+@media (max-width: 576px) {
+  #encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12vh;
+    width: 96%;
+    padding-top: 5px;
+  }
+
+  #imgLogo {
+    width: 50px;
+    height: 50px;
+  }
+
+  h1 {
+    font-size: 25px;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding-top: 10px;
+  }
+
+  #formularioNuevaPartida {
+    width: 90%;
+    padding: 15px;
+    margin-top: 15px;
+  }
+
+  #formularioNuevaPartida label {
+    font-size: 1rem;
+  }
+
+  #formularioNuevaPartida input,
+  #formularioNuevaPartida select {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 8px 20px;
+  }
+
+  #pieNuevaPartida {
+    margin-top: auto;
+  }
+
+  #derechos {
+    font-size: 12px;
+  }
+}
+
+
+/* ======== TABLET ======== */
+@media (min-width: 577px) and (max-width: 992px) {
+  #encabezado {
+    height: 15vh;
+    width: 94%;
+  }
+
+  #imgLogo {
+    width: 80px;
+    height: 80px;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  #descripcion {
+    font-size: 1.4rem;
+  }
+
+  #formularioNuevaPartida {
+    width: 70%;
+    font-size: 1rem;
+  }
+
+  #derechos {
+    font-size: 18px;
+  }
+}
