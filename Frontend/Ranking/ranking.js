@@ -1,4 +1,4 @@
-const urlRanking = "../../Backend/Capa_de_Datos/ranking.php";
+const urlRanking = "../Backend/Capa_de_Datos/ranking.php";
 
 fetch(urlRanking)
   .then(response => {

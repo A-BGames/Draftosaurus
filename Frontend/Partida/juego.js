@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   try {
    
     
-    const res = await fetch(`../../../Backend/Capa_de_Datos/registroPartidas.php?id=${id_partida}`);
+    const res = await fetch(`../../Backend/Capa_de_Datos/registroPartidas.php?id=${id_partida}`);
     const data = await res.json();
  console.log(data);
     if (!data.success) {
@@ -93,7 +93,7 @@ tableros.push(jugadorData);
 
   try {
     
-    const res = await fetch("../../../Backend/Capa_de_Datos/actualizarPartida.php", {
+    const res = await fetch("../../Backend/Capa_de_Datos/actualizarPartida.php", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -163,7 +163,7 @@ tableros.push(jugadorData);
   document.getElementById('finalizar').addEventListener('click', async () => {
     const estadoDinos = recolectarEstado();
   try {
-    const res = await fetch("../../../Backend/Capa_de_Datos/finalizarPartida.php", {
+    const res = await fetch("../../Backend/Capa_de_Datos/finalizarPartida.php", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -218,7 +218,7 @@ tableros.push(jugadorData);
 
     
     try {
-      const res = await fetch("../../../Backend/Capa_de_Datos/actualizarPartida.php", {
+      const res = await fetch("../../Backend/Capa_de_Datos/actualizarPartida.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -235,7 +235,7 @@ tableros.push(jugadorData);
       }
 
     
-      const pausaRes = await fetch("../../../Backend/Capa_de_Datos/pausarPartida.php", {
+      const pausaRes = await fetch("../../Backend/Capa_de_Datos/pausarPartida.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
