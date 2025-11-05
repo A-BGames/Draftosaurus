@@ -157,7 +157,7 @@ button {
 /*Responsive para celular*/
 @media (max-width: 576px) {
   #encabezado {
-    height: 14vh; /* un poco más de espacio */
+    height: 14vh;
     width: 96%;
   }
 
@@ -169,7 +169,7 @@ button {
   h1 {
      font-size: 28px;
     text-align: center;
-    margin-top: 10px;  /* separa LOGO → TÍTULO */
+    margin-top: 10px;
     margin-bottom: 8px;
   }
 
