@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmtNacimiento->execute();
         $stmtNacimiento->close();
 
-        echo "<script>alert('Registro exitoso.'); window.location.href='../../Frontend/Capa_de_Presentacion/InicioSesion/inicioSesion.html';</script>";
+        echo "<script>alert('Registro exitoso.'); window.location.href='../../Frontend/InicioSesion/inicioSesion.html';</script>";
     } else {
         echo "<script>alert('Error al registrar.'); window.history.back();</script>";
     }
