@@ -1,4 +1,3 @@
-/* ======== Base (PC por defecto) ======== */
 body {
   display: flex;
   flex-direction: column;
@@ -61,7 +60,7 @@ h1 {
   border: 2px solid #8e9491;
   padding: 8px;
   font-family: "Boogaloo", sans-serif;
-  font-size: 1rem;
+  font-size: 16px;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.8);
   color: #182b23;
@@ -95,13 +94,10 @@ button {
   margin-top: 15px;
 }
 
-#pieNuevaPartida {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#pieDePagina {
   background: transparent;
   width: 100%;
-  min-height: 5vh;
+  height: 55px;
   margin-top: auto;
 }
 
@@ -115,7 +111,7 @@ button {
   font-family: 'Times New Roman', Times, serif;
 }
 
-/* ======== CELULAR ======== */
+/*Responsive celular*/
 @media (max-width: 576px) {
   #encabezado {
     display: flex;
@@ -146,13 +142,13 @@ button {
   }
 
   #formularioNuevaPartida label {
-    font-size: 1rem;
+    font-size: 16px;
   }
 
   #formularioNuevaPartida input,
   #formularioNuevaPartida select {
     width: 90%;
-    font-size: 0.9rem;
+    font-size: 14px;
   }
 
   button {
@@ -160,7 +156,7 @@ button {
     padding: 8px 20px;
   }
 
-  #pieNuevaPartida {
+  #pieDePagina {
     margin-top: auto;
   }
 
@@ -169,9 +165,8 @@ button {
   }
 }
 
-
-/* ======== TABLET ======== */
-@media (min-width: 577px) and (max-width: 992px) {
+/*Responsive tablet*/
+@media (max-width: 992px) {
   #encabezado {
     height: 15vh;
     width: 94%;
@@ -187,12 +182,12 @@ button {
   }
 
   #descripcion {
-    font-size: 1.4rem;
+    font-size: 22px;
   }
 
   #formularioNuevaPartida {
     width: 70%;
-    font-size: 1rem;
+    font-size: 16px;
   }
 
   #derechos {

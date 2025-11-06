@@ -1,8 +1,4 @@
-
 body{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin: 0;
   min-height: 100vh;
   width: 100%;
@@ -14,9 +10,6 @@ body{
 }
 
 #encabezado {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background: transparent;
   height: 15vh;
   width: 96%;
@@ -29,7 +22,7 @@ body{
 
 h1 {
   font-family: "Henny Penny", system-ui;
-  font-size: 4rem;
+  font-size: 64px;
   text-shadow: 2px 2px 4px black;
   color: #ffaa33;
   margin: 0;
@@ -37,7 +30,7 @@ h1 {
 }
 
 #descripcion {
-  font-size: 1.6rem;
+  font-size: 25px;
   color: #d84f19;
   text-shadow: 1px 1px 2px black;
   font-family: "Henny Penny", system-ui;
@@ -58,9 +51,6 @@ h1 {
 }
 
 #pieDePagina {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: transparent;
   width: 100%;
   min-height: 5vh;
@@ -122,7 +112,7 @@ table {
 
 thead th {
   font-family: "Henny Penny", system-ui;
-  font-size: 1.8rem;
+  font-size: 28px;
   color: #e9c46a;
   text-shadow: 1px 1px 3px black;
   background-color: #91a492;
@@ -131,7 +121,7 @@ thead th {
 
 tbody tr {
   font-family: "Boogaloo", sans-serif;
-  font-size: 1.4rem;
+  font-size: 22px;
   color: #182b23;
   text-shadow: 1px 1px 2px #ffffffa2;
   border-bottom: 1px solid #5c8a4f;
@@ -157,7 +147,7 @@ tbody tr:hover {
     font-size: 50px;
   }
   #descripcion {
-    font-size: 1.3rem;
+    font-size: 20px;
     width: 85%;
     margin: 0 auto;
     text-align: center;
@@ -194,11 +184,11 @@ tbody tr:hover {
   }
 
   thead th {
-    font-size: 1.2rem;
+    font-size: 19px;
   }
 
   tbody td, tbody tr {
-    font-size: 1rem;
+    font-size: 16px;
   }
 
   #derechos {

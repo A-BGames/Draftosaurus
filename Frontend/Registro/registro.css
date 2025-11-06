@@ -1,7 +1,4 @@
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin: 0;
   min-height: 100vh;
   width: 100%;
@@ -13,9 +10,6 @@ body {
 }
 
 #encabezado {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: transparent;
   height: 20vh;
   width: 95%;
@@ -70,7 +64,7 @@ h1 {
   border: 2px solid #8e9491;
   padding: 8px;
   font-family: "Boogaloo", sans-serif;
-  font-size: 1rem;
+  font-size: 16px;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.85);
   color: #182b23;
@@ -101,13 +95,10 @@ button {
   color: #ffd98a;
 }
 
-#pieRegistro {
-   display: flex;
-  justify-content: center;
-  align-items: center;
+#pieDePagina {
   background: transparent;
   width: 100%;
-  min-height: 5vh;
+  height: 55px;
   margin-top: auto;
 }
 
@@ -176,7 +167,7 @@ button {
   }
 
   .etiqueta {
-    font-size: 1rem;
+    font-size: 16px;
   }
 
   #formularioRegistro input {
