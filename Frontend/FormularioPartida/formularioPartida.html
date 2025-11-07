@@ -20,26 +20,26 @@
     <div class="ms-2">
       <img src="../../Imagenes/Logo_de_empresa-removebg-preview - copia.png" alt="logo" id="imgLogo" />
     </div>
-    <h1 class="fw-bold text-center flex-grow-1 mt-3">CREAR NUEVA PARTIDA</h1>
+    <h1 class="fw-bold text-center flex-grow-1 mt-3" data-lang="titulo_crear_partida">CREAR NUEVA PARTIDA</h1>
   </header>
 
   <main id="contenido" class="container my-4 text-center">
 
     <form id="formularioNuevaPartida" class="mx-auto">
-      <label for="nombrePartida">Nombre de la partida:</label>
+      <label for="nombrePartida" data-lang="nombre_partida_label">Nombre de la partida:</label>
       <input type="text" id="nombre_partida" required><br>
 
-      <label for="modoJuego">Modo de juego:</label>
+      <label for="modoJuego" data-lang="modo_juego_label">Modo de juego:</label>
       <select id="id_modo" required>
-        <option value="" disabled selected>Seleccione...</option>
-        <option value="2">Normal</option>
-        <option value="3">Asistido</option>
-        <option value="4">Hardcore</option>
+        <option value="" disabled selected data-lang="seleccione">Seleccione...</option>
+        <option value="2" data-lang="modo_normal">Normal</option>
+        <option value="3" data-lang="modo_asistido">Asistido</option>
+        <option value="4" data-lang="modo_hardcore">Hardcore</option>
       </select><br>
 
-      <label for="numeroJugadores">Número de jugadores:</label>
+      <label for="numeroJugadores" data-lang="numero_jugadores_label">Número de jugadores:</label>
       <select id="numeroJugadores" required>
-        <option value="" disabled selected>Seleccione...</option>
+        <option value="" disabled selected data-lang="seleccione">Seleccione...</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
@@ -48,20 +48,20 @@
 
       <div id="jugadoresInputs"></div><br>
 
-      <button type="submit">Crear Partida</button>
+      <button type="submit" data-lang="crear_partida">Crear Partida</button>
     </form>
 
     <div class="mt-4">
-      <a href="../Index/index.html" class="volver-boton">Volver</a>
+      <a href="../Index/index.html" class="volver-boton" data-lang="volver">Volver</a>
     </div>
-
-    <script src="formularioPartida.js"></script>
   </main>
 
     <footer id="pieDePagina">
-        <p id="derechos">Todos los derechos reservados por A-B GAMES S.A.S</p>
+        <p id="derechos" data-lang="derechos">Todos los derechos reservados por A-B GAMES S.A.S</p>
     </footer>
 
+    <script src="formularioPartida.js"></script>
+    <script src="../Idioma/lang.js"></script>
 </body>
 
 </html>
