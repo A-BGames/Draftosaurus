@@ -1,0 +1,149 @@
+{
+  "es": {
+
+    "titulo_principal": "Draftosaurus",
+    "link_guia": "Guía",
+    "texto_bienvenida_index": "Bienvenidos a Draftosaurus, un juego en donde debes gestionar un parque de dinosaurios.",
+    "titulo_menu": "Menú Principal",
+    "nueva_partida": "Nueva Partida",
+    "cargar_partida": "Cargar Partida",
+    "ver_estadisticas": "Ver Estadísticas",
+    "ver_ranking": "Ver Ranking",
+
+    "titulo_inicio_sesion": "INICIO DE SESIÓN",
+    "texto_bienvenida_sesion": "¡Bienvenido/a! Inicia sesión para continuar.",
+    "nombre_usuario": "Nombre de Usuario:",
+    "contraseña": "Contraseña:",
+    "ingresar": "Ingresar",
+    "no_tienes_cuenta": "¿No tienes cuenta? Regístrate aquí",
+    "olvidaste_contraseña": "¿Olvidaste tu contraseña?",
+
+    "titulo_cargar_partida": "CARGAR PARTIDA",
+    "texto_cargar_partida": "Aquí podrás retomar las partidas pausadas.",
+    "retomar": "Retomar",
+    "volver": "Volver",
+
+    "titulo_estadisticas": "ESTADÍSTICAS",
+    "texto_estadisticas": "Aquí podrás visualizar los puntajes obtenidos por los jugadores.",
+    "estadisticas_puntajes": "Estadísticas de Puntajes",
+
+    "titulo_crear_partida": "CREAR NUEVA PARTIDA",
+    "nombre_partida_label": "Nombre de la partida:",
+    "modo_juego_label": "Modo de juego:",
+    "seleccione": "Seleccione...",
+    "numero_jugadores_label": "Número de jugadores:",
+    "crear_partida": "Crear Partida",
+    "modo_normal": "Normal",
+    "modo_asistido": "Asistido",
+    "modo_hardcore": "Hardcore",
+    "seleccione_jugador": "Seleccione un jugador",
+
+    "titulo_rest_contra": "RESTABLECER CONTRASEÑA",
+    "texto_recuperacion": "Seleccione un método para recuperar su cuenta.",
+    "medio_recuperacion": "Medio de recuperación:",
+    "restablecer": "Restablecer",
+    "medio_mail": "Mail",
+    "medio_celular": "Celular",
+
+    "titulo_registro": "REGISTRO",
+    "texto_registro": "¡Regístrate para comenzar a jugar!",
+    "primer_nombre": "Primer Nombre:",
+    "apellido_paterno": "Apellido Paterno:",
+    "apellido_materno": "Apellido Materno:",
+    "correo_electronico": "Correo Electrónico:",
+    "celular": "Celular (+598):",
+    "fecha_nacimiento": "Fecha de Nacimiento:",
+    "registrarse": "Registrarse",
+    "ya_tienes_cuenta": "¿Ya tienes una cuenta? Inicia sesión aquí",
+
+    "lanzar_dado": "Lanzar Dado",
+    "turno_de": "Turno de:",
+    "finalizar": "Finalizar",
+    "pausar": "Pausar",
+    "puntos": "Puntos:",
+
+    "ranking": "RANKING",
+    "texto_ranking": "Aquí podrás ver el ranking de jugadores según sus puntajes acumulados.",
+    "puesto": "Puesto",
+    "nombre": "Nombre",
+    "puntos_tabla": "Puntos",
+
+    "guia": "Guía",
+
+    "derechos": "Todos los derechos reservados por A-B GAMES S.A.S"
+  },
+
+  "en": {
+
+    "titulo_principal": "Draftosaurus",
+    "link_guia": "Guide",
+    "texto_bienvenida_index": "Welcome to Draftosaurus, a game where you manage a dinosaur park.",
+    "titulo_menu": "Main Menu",
+    "nueva_partida": "New Game",
+    "cargar_partida": "Load Game",
+    "ver_estadisticas": "View Statistics",
+    "ver_ranking": "View Ranking",
+
+    "titulo_inicio_sesion": "LOGIN",
+    "texto_bienvenida_sesion": "Welcome! Log in to continue.",
+    "nombre_usuario": "Username:",
+    "contraseña": "Password:",
+    "ingresar": "Log in",
+    "no_tienes_cuenta": "Don't have an account? Sign up here",
+    "olvidaste_contraseña": "Forgot your password?",
+
+    "titulo_cargar_partida": "LOAD GAME",
+    "texto_cargar_partida": "Here you can resume paused games.",
+    "retomar": "Resume",
+    "volver": "Back",
+
+    "titulo_estadisticas": "STATISTICS",
+    "texto_estadisticas": "Here you can view the scores obtained by the players.",
+    "estadisticas_puntajes": "Score Statistics",
+
+    "titulo_crear_partida": "CREATE NEW GAME",
+    "nombre_partida_label": "Game Name:",
+    "modo_juego_label": "Game Mode:",
+    "seleccione": "Select...",
+    "numero_jugadores_label": "Number of Players:",
+    "crear_partida": "Create Game",
+    "modo_normal": "Normal",
+    "modo_asistido": "Assisted",
+    "modo_hardcore": "Hardcore",
+    "seleccione_jugador": "Select a player",
+
+    "titulo_rest_contra": "RESET PASSWORD",
+    "texto_recuperacion": "Select a method to recover your account.",
+    "medio_recuperacion": "Recovery Method:",
+    "restablecer": "Reset",
+    "medio_mail": "Email",
+    "medio_celular": "Phone",
+
+    "titulo_registro": "SIGN UP",
+    "texto_registro": "Sign up to start playing!",
+    "primer_nombre": "First Name:",
+    "apellido_paterno": "Last Name (Father):",
+    "apellido_materno": "Last Name (Mother):",
+    "correo_electronico": "Email:",
+    "celular": "Phone (+598):",
+    "fecha_nacimiento": "Birth Date:",
+    "registrarse": "Sign Up",
+    "ya_tienes_cuenta": "Do you already have an account? Log in here.",
+
+    "lanzar_dado": "Roll Dice",
+    "turno_de": "Turn of:",
+    "finalizar": "Finish",
+    "pausar": "Pause",
+    "puntos": "Points:",
+
+    "ranking": "RANKING",
+    "texto_ranking": "Here you can view the ranking of players based on their accumulated scores.",
+    "puesto": "Position",
+    "nombre": "Name",
+    "puntos_tabla": "Points",
+
+    "guia": "Guide",
+
+    "derechos": "All rights reserved by A-B GAMES S.A.S"
+  }
+}

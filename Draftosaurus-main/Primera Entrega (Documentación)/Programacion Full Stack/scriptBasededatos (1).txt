@@ -1,0 +1,178 @@
+CREATE DATABASE draftosaurus;
+USE draftosaurus;
+
+CREATE TABLE Jugador (
+    id_jugador INT PRIMARY KEY AUTO_INCREMENT,
+    nombreCompleto VARCHAR(50) NOT NULL,
+    nombreUsuario VARCHAR(50) NOT NULL,
+    contraseña VARCHAR(255) NOT NULL,
+    correo VARCHAR(50) NOT NULL,
+    celular INT(9) NOT NULL,
+    fechaNacimiento DATE NOT NULL
+);
+
+CREATE TABLE Partida (
+    id_partida INT PRIMARY KEY AUTO_INCREMENT,
+    fecha DATE NOT NULL,
+    modo_de_juego ENUM('Estándar', 'Solo', 'Invierno') NOT NULL,
+    ganador INT,
+    FOREIGN KEY (ganador) REFERENCES Jugador(id_jugador)
+);
+
+CREATE TABLE Tablero (
+    id_tablero INT PRIMARY KEY AUTO_INCREMENT,
+    id_jugador INT UNIQUE NOT NULL,
+    FOREIGN KEY (id_jugador) REFERENCES Jugador(id_jugador)
+);
+CREATE TABLE Dinosaurio (
+    id_dinosaurio INT  AUTO_INCREMENT,
+    id_tablero    INT  NOT NULL,
+    id_jugador    INT  NOT NULL,
+    especie VARCHAR(50) NOT NULL,
+    PRIMARY KEY (id_dinosaurio,id_jugador,id_tablero),
+    FOREIGN KEY (id_jugador) REFERENCES Jugador(id_jugador),
+    FOREIGN KEY (id_tablero) REFERENCES Tablero(id_tablero)	
+);
+
+CREATE TABLE Zona_Tablero (
+    id_zona INT PRIMARY KEY AUTO_INCREMENT,
+    id_tablero INT NOT NULL,
+    nombre_zona VARCHAR(50) NOT NULL,
+    regla_puntuacion TEXT NOT NULL,
+    FOREIGN KEY (id_tablero) REFERENCES Tablero(id_tablero)
+);
+
+
+CREATE TABLE Ronda (
+    id_ronda INT  AUTO_INCREMENT,
+    id_partida INT NOT NULL,
+    numero_ronda INT CHECK (numero_ronda IN (1, 2)),
+    PRIMARY KEY (id_ronda, id_partida), 
+    FOREIGN KEY (id_partida) REFERENCES partida(id_partida) 
+);
+
+CREATE TABLE Turno (
+    id_turno INT PRIMARY KEY AUTO_INCREMENT,
+    numero_turno INT CHECK (numero_turno BETWEEN 1 AND 6),
+    id_ronda INT,
+    FOREIGN KEY (id_ronda) REFERENCES Ronda(id_ronda)
+);
+CREATE TABLE partida_jugador (
+    id_partida INT NOT NULL, 
+    id_jugador INT NOT NULL,
+    puntuacion INT NOT NULL,
+
+    PRIMARY KEY (id_partida, id_jugador), 
+    FOREIGN KEY (id_partida) REFERENCES partida(id_partida), 
+    FOREIGN KEY (id_jugador) REFERENCES jugador(id_jugador)  
+);
+
+CREATE TABLE jugador_tablero (
+    id_jugador INT NOT NULL,
+    id_tablero INT NOT NULL,
+
+    PRIMARY KEY (id_tablero, id_jugador), 
+    FOREIGN KEY (id_tablero) REFERENCES tablero(id_tablero), 
+    FOREIGN KEY (id_jugador) REFERENCES jugador(id_jugador)  
+);
+CREATE TABLE ronda_jugador (
+    id_jugador INT NOT NULL,
+    id_ronda INT NOT NULL,
+    id_turno INT NOT NULL,
+
+    PRIMARY KEY (id_ronda, id_jugador,id_turno), 
+    FOREIGN KEY (id_ronda) REFERENCES ronda(id_ronda), 
+    FOREIGN KEY (id_jugador) REFERENCES jugador(id_jugador),  
+    FOREIGN KEY (id_turno) REFERENCES turno(id_turno)
+);
+CREATE TABLE dinosaurio_por_zona(
+    id_dinosaurio INT NOT NULL,
+    id_zona       INT NOT NULL,
+    zona_puntos   INT NOT NULL,
+    PRIMARY KEY (id_dinosaurio,id_zona),
+    FOREIGN KEY (id_dinosaurio) REFERENCES dinosaurio(id_dinosaurio),
+    FOREIGN KEY (id_zona) REFERENCES zona_tablero(id_zona)
+);
+
+--Datos insertados en la BD
+INSERT INTO Jugador (nombreCompleto, nombreUsuario, contraseña, correo, celular, fechaNacimiento) VALUES ('Mateo Martinez', 'MateoManya44', 'Mateo123', 'MateoMar@gmail.com', 099876543, '2001-06-22'), ('Lucía Lopez', 'LucíaBolso55', 'Lucía123', 'LucíaL7@hotmail.com', 091816513, '2000-02-12'), ('Sofía Suarez', 'SofíaRampla34', 'Sofía123', 'Sofía4567@hotmail.com', 095516553, '1999-05-05'), ('Juan Jirafales', 'JuanJJJ33', 'Juan123', 'Juan1212@hotmail.com', 094516551, '1999-08-01');
+INSERT INTO Partida (fecha, modo_de_juego, ganador) VALUES ('2025-07-28', 'Estándar', NULL);
+INSERT INTO Tablero (id_jugador) VALUES (1), (2), (3), (4);
+INSERT INTO `partida_jugador`(`id_partida`, `id_jugador`, `puntuacion`) VALUES (1,1,0),
+(1,2,0),(1,3,0), (1,4,0)
+
+INSERT INTO `zona_tablero`(`id_zona`, `nombre_zona`, `regla_puntuacion`, `id_tablero`) VALUES (1,'El Bosque de la Semejanza','Solo puedes colocar dinosaurios de la misma especie',1),(2,'El Prado de la Diferencia','No puede haber más de un dinosaurio de la misma especie',1), (3,'La Pradera del Amor','Puedes colocar hasta dos dinosaurios de la misma especie, y cada pareja vale puntos. ',1), (4,'El Trío Frondoso','Este recinto sólo puede albergar dinosaurios de especies distintas',1), (5,'El Rey de la Selva','Este recinto puede albergar solo 1 dinosaurio',1), (6,'La Isla Solitaria','Este recinto puede albergar solo 1 dinosaurio, además debe de ser el unico de su especie en todo el tablero',1), (7,'Rio','No hay',1),
+(8,'El Bosque de la Semejanza','Solo puedes colocar dinosaurios de la misma especie',2), (9,'El Prado de la Diferencia','No puede haber más de un dinosaurio de la misma especie',2), (10,'La Pradera del Amor','Puedes colocar hasta dos dinosaurios de la misma especie, y cada pareja vale puntos. ',2), (11,'El Trío Frondoso','Este recinto sólo puede albergar dinosaurios de especies distintas',2), (12,'El Rey de la Selva','Este recinto puede albergar solo 1 dinosaurio',2), (13,'La Isla Solitaria','Este recinto puede albergar solo 1 dinosaurio, además debe de ser el unico de su especie en todo el tablero',2), (14,'Rio','No hay',2),
+(15,'El Bosque de la Semejanza','Solo puedes colocar dinosaurios de la misma especie',3), (16,'El Prado de la Diferencia','No puede haber más de un dinosaurio de la misma especie',3), (17,'La Pradera del Amor','Puedes colocar hasta dos dinosaurios de la misma especie, y cada pareja vale puntos. ',3), (18,'El Trío Frondoso','Este recinto sólo puede albergar dinosaurios de especies distintas',3), (19,'El Rey de la Selva','Este recinto puede albergar solo 1 dinosaurio',3), (20,'La Isla Solitaria','Este recinto puede albergar solo 1 dinosaurio, además debe de ser el unico de su especie en todo el tablero',3), (21,'Rio','No hay',3),
+(22,'El Bosque de la Semejanza','Solo puedes colocar dinosaurios de la misma especie',4), (23,'El Prado de la Diferencia','No puede haber más de un dinosaurio de la misma especie',4), (24,'La Pradera del Amor','Puedes colocar hasta dos dinosaurios de la misma especie, y cada pareja vale puntos. ',4), (25,'El Trío Frondoso','Este recinto sólo puede albergar dinosaurios de especies distintas',4), (26,'El Rey de la Selva','Este recinto puede albergar solo 1 dinosaurio',4), (27,'La Isla Solitaria','Este recinto puede albergar solo 1 dinosaurio, además debe de ser el unico de su especie en todo el tablero',4), (28,'Rio','No hay',4)
+
+INSERT INTO `jugador_tablero`(`id_jugador`, `id_tablero`) VALUES ('1','1'),
+('2','2'),('3','3'),('4','4')
+
+INSERT INTO `ronda`(`id_ronda`,`id_partida`, `numero_ronda`) VALUES (1,1,1),(2,1,2)
+INSERT INTO `turno`(`id_turno`, `numero_turno`, `id_ronda`) VALUES (1,1,1),(2,2,1),(3,3,1),(4,4,1),(5,5,1),(6,6,1),(7,1,2),(8,2,2),(9,3,2),(10,4,2),(11,5,2),(12,6,2)
+INSERT INTO `ronda_jugador`(`id_jugador`, `id_ronda`, `id_turno`) VALUES (1,1,1),(2,1,1),(3,1,1),(4,1,1),(1,1,2),(2,1,2),(3,1,2),(4,1,2),(1,1,3),(2,1,3),(3,1,3),(4,1,3),(1,1,4),(2,1,4),(3,1,4),(4,1,4),(1,1,5),(2,1,5),(3,1,5),(4,1,5),(1,1,6),(2,1,6),(3,1,6),(4,1,6),(1,2,7),(2,2,7),(3,2,7),(4,2,7),(1,2,8),(2,2,8),(3,2,8),(4,2,8),(1,2,9),(2,2,9),(3,2,9),(4,2,9),(1,2,10),(2,2,10),(3,2,10),(4,2,10),(1,2,11),(2,2,11),(3,2,11),(4,2,11),(1,2,12),(2,2,12),(3,2,12),(4,2,12)
+INSERT INTO `dinosaurio`(`id_dinosaurio`, `id_tablero`, `id_jugador`, `especie`) VALUES (1,1,1,"Triceratops"),
+(2,1,1,"Tiranosaurio Rex"),(3,1,1,"Brontosaurio"),(4,1,1,"Tiranosaurio Rex"),(5,1,1,"Triceratops"),(6,1,1,"Espinosaurio"),(7,1,1,"Stegosaurio"),(8,1,1,"Tiranosaurio Rex"),(9,1,1,"Stegosaurio"),(10,1,1,"Parasaurolophus"),(11,1,1,"Triceratops"),(12,1,1,"Parasaurolophus"),
+(13,2,2,"Triceratops"),(14,2,2,"Tiranosaurio Rex"),(15,2,2,"Brontosaurio"),(16,2,2,"Tiranosaurio Rex"),(17,2,2,"Triceratops"),(18,2,2,"Brontosaurio"),(19,2,2,"Stegosaurio"),(20,2,2,"Espinosaurio"),(21,2,2,"Stegosaurio"),(22,2,2,"Parasaurolophus"),(23,2,2,"Stegosaurio"),(24,2,2,"Parasaurolophus"),
+(25,3,3,"Espinosaurio"),(26,3,3,"Tiranosaurio Rex"),(27,3,3,"Brontosaurio"),(28,3,3,"Tiranosaurio Rex"),(29,3,3,"Espinosaurio"),(30,3,3,"Brontosaurio"),(31,3,3,"Stegosaurio"),(32,3,3,"Espinosaurio"),(33,3,3,"Espinosaurio"),(34,3,3,"Parasaurolophus"),(35,3,3,"Stegosaurio"),(36,3,3,"Parasaurolophus"),
+(37,4,4,"Triceratops"),(38,4,4,"Tiranosaurio Rex"),(39,4,4,"Brontosaurio"),(40,4,4,"Brontosaurio"),(41,4,4,"Triceratops"),(42,4,4,"Brontosaurio"),(43,4,4,"Triceratops"),(44,4,4,"Espinosaurio"),(45,4,4,"Stegosaurio"),(46,4,4,"Parasaurolophus"),(47,4,4,"Espinosaurio"),(48,4,4,"Parasaurolophus")
+
+INSERT INTO `dinosaurio_por_zona`(`id_dinosaurio`, `id_zona`, `zona_puntos`) VALUES 
+(1,2,1), (13,9,1),(25,16,1),(37,23,1),
+(14,11,1),(26,18,1),(38,25,1),(2,4,1),
+(27,16,2),(39,23,2),(3,6,7),(15,10,0),
+(40,24,0),(4,2,3),(16,9,3),(28,16,4),
+(5,5,0),(17,11,0),(29,18,0),(41,25,0),
+(18,10,5),(30,18,7),(42,24,5),(6,4,0),
+(31,15,2),(43,22,2),(7,3,0),(19,8,2),
+(44,23,3),(8,7,1),(20,9,3),(32,16,4),
+(9,3,5),(21,9,4),(33,17,0),(45,23,4),
+(22,10,0),(34,20,0),(46,23,5),(10,3,0),
+(35,15,2),(47,25,7),(11,4,7),(23,12,7),
+(48,28,1),(12,2,3),(24,9,5),(36,23,6)
+
+--Consultas Basicas
+SELECT j.nombreUsuario
+FROM partida_jugador pj
+INNER JOIN jugador j ON pj.id_jugador = j.id_jugador
+WHERE pj.id_partida = 1;
+
+
+SELECT 
+  pj.id_partida,
+  pj.id_jugador,
+  d.id_dinosaurio,
+  d.especie,
+  dpz.id_zona
+FROM partida_jugador pj
+INNER JOIN dinosaurio d 
+  ON pj.id_jugador = d.id_jugador
+INNER JOIN dinosaurio_por_zona dpz 
+  ON d.id_dinosaurio = dpz.id_dinosaurio;
+
+SELECT 
+  d.id_jugador,
+  pj.id_partida,
+  SUM(dpz.zona_puntos) AS puntuacion_total
+FROM dinosaurio_por_zona dpz
+INNER JOIN dinosaurio d ON dpz.id_dinosaurio = d.id_dinosaurio
+INNER JOIN partida_jugador pj ON d.id_jugador = pj.id_jugador
+GROUP BY d.id_jugador, pj.id_partida;
+
+SELECT 
+    d.id_jugador,
+    j.nombreUsuario AS nombre_jugador,
+    pj.id_partida,
+    SUM(dpz.zona_puntos) AS puntuacion_total,
+    SUM(CASE WHEN d.especie = 'Tiranosaurio Rex' THEN 1 ELSE 0 END) AS cantidad_trex
+FROM dinosaurio d
+INNER JOIN dinosaurio_por_zona dpz ON d.id_dinosaurio = dpz.id_dinosaurio
+INNER JOIN partida_jugador pj ON d.id_jugador = pj.id_jugador
+INNER JOIN jugador j ON d.id_jugador = j.id_jugador
+GROUP BY d.id_jugador, pj.id_partida, j.nombreUsuario
+ORDER BY puntuacion_total DESC, cantidad_trex DESC
+LIMIT 1;
+
+
+
