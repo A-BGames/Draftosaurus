@@ -20,8 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `draftosaurus`
 --
-CREATE DATABASE `Draftosaurus`;
-USE DATABASE Draftosaurus;
+
 -- --------------------------------------------------------
 
 --
