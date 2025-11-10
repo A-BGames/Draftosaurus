@@ -9,6 +9,12 @@
     "cargar_partida": "Cargar Partida",
     "ver_estadisticas": "Ver Estadísticas",
     "ver_ranking": "Ver Ranking",
+    "perfil": "Perfil",
+
+    "titulo_perfil": "Mi Perfil",
+    "cerrar_sesion": "Cerrar Sesión",
+    "usuario_label": "Usuario:",
+    "correo_label": "Correo:",
 
     "titulo_inicio_sesion": "INICIO DE SESIÓN",
     "texto_bienvenida_sesion": "¡Bienvenido/a! Inicia sesión para continuar.",
@@ -83,6 +89,12 @@
     "cargar_partida": "Load Game",
     "ver_estadisticas": "View Statistics",
     "ver_ranking": "View Ranking",
+    "perfil": "Profile",
+
+    "titulo_perfil": "My Profile",
+    "cerrar_sesion": "Log Out",
+    "usuario_label": "User:",
+    "correo_label": "Email:",
 
     "titulo_inicio_sesion": "LOGIN",
     "texto_bienvenida_sesion": "Welcome! Log in to continue.",
