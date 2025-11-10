@@ -1,0 +1,184 @@
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('../../Imagenes/Fondo-Index.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: "Boogaloo", sans-serif;
+}
+
+#encabezado {
+  background-color: transparent;
+}
+
+#imgLogo {
+  width: 100px;
+  height: 100px;
+}
+
+h1 {
+  font-size: 50px;
+  margin: 0;
+  font-family: "Henny Penny", system-ui;
+  text-shadow: 2px 2px 4px black;
+  color: #ffaa33;
+}
+
+#tituloPerfil {
+  font-size: 40px;
+  color: #d84f19;
+  text-shadow: 1px 1px 3px black;
+  font-family: "Henny Penny", system-ui;
+  margin-bottom: 20px;
+}
+
+#perfil_contenedor {
+  background-color: #fffbe628;
+  border: 3px solid #91a492;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  width: 55%;
+  padding: 25px;
+  margin: 0 auto 30px auto;
+}
+
+.dato {
+  font-size: 28px;
+  color: #e9c46a;
+  text-shadow: 1px 1px 3px black;
+  font-family: "Henny Penny", system-ui;
+  margin: 10px 0;
+}
+
+.btn-cerrar {
+  background: #91a492;
+  color: #e9c46a;
+  border: 2px solid #182b23;
+  font-family: "Henny Penny", system-ui;
+  font-size: 20px;
+  padding: 8px 24px;
+  border-radius: 10px;
+  text-shadow: 1px 1px 2px black;
+  cursor: pointer;
+}
+
+.volver-boton {
+  color: #e9c46a;
+  background: #91a492;
+  border-color: #182b23;
+  font-family: "Henny Penny", system-ui;
+  font-size: 18px;
+  padding: 8px 24px;
+  border-radius: 10px;
+  text-shadow: 1px 1px 2px black;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#pieDePagina {
+  background: transparent;
+  width: 100%;
+  height: 55px;
+  margin-top: auto;
+}
+
+#derechos {
+  font-size: 20px;
+  margin: 0px;
+  width: 100%;
+  color: beige;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/*Responsive tablet*/
+@media (max-width: 992px) {
+
+  #encabezado {
+    width: 94%;
+  }
+
+  #imgLogo {
+    width: 90px;
+    height: 90px;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  #tituloPerfil {
+    font-size: 32px;
+  }
+
+  #perfilCard {
+    width: 75%;
+    padding: 20px;
+  }
+
+  .dato {
+    font-size: 22px;
+  }
+
+  .btn-cerrar {
+    font-size: 18px;
+    padding: 6px 18px;
+  }
+
+  #derechos {
+    font-size: 16px;
+  }
+}
+
+
+/*Responsive celular*/
+@media (max-width: 576px) {
+
+  #encabezado {
+    width: 96%;
+    padding-top: 6px;
+    padding-bottom: 4px;
+  }
+
+  #imgLogo {
+    width: 45px;
+    height: 45px;
+  }
+
+  h1 {
+    font-size: 28px;
+    line-height: 1.2;
+    margin: 4px 0;
+  }
+
+  #tituloPerfil {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  #perfilCard {
+    width: 85%;
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  .dato {
+    font-size: 16px;
+    margin: 6px 0;
+  }
+
+  .btn-cerrar {
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 8px;
+  }
+
+  #derechos {
+    font-size: 12px;
+  }
+}
